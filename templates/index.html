@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating</title>
+</head>
+<body>
+<h1>Rating</h1>
+<form action="DrawRating" method="get">
+    <input type="number" min="0" max="100" name="rating" value="{{rating}}"/>
+    <input type="submit" value="Rate"/>
+</form>
+<br />
+{% for star in range(full_star) %}
+<img src="/static/full-star.png" width="50" height="50" />
+{% endfor %}
+
+{% for star in range(half_star) %}
+<img src="/static/half-star.png" width="50" height="50" />
+{% endfor %}
+
+{% for star in range(empty_star) %}
+<img src="/static/empty-star.png" width="50" height="50" />
+{% endfor %}
+
+</body>
+</html>
